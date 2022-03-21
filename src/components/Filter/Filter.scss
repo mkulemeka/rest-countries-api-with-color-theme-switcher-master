@@ -1,0 +1,19 @@
+.app__filter {
+    #search {
+        color: var(--text-color) !important;
+        background-color: var(--elements-color) !important;
+        outline: none;
+        border: 1px solid black;
+        &:focus {
+            outline: none !important;
+        }
+    }
+    &-dropdown {
+        width: 10rem !important;
+        color: var(--text-color) !important;
+        background-color: var(--elements-color) !important;
+        outline: none;
+        cursor: pointer;
+        appearance: auto;
+    }
+}

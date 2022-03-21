@@ -1,0 +1,41 @@
+.app-card {
+    width: 21rem !important;
+}
+.app__card {
+  margin-bottom: 5rem;
+
+  color: var(--text-color);
+  background-color: var(--elements-color);
+  border-radius: 5px;
+
+  &-img {
+    width: 100%;
+    height: 10rem;
+    img {
+      width: 100%;
+      height: 100%;
+      
+
+      object-fit: cover;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+  }
+
+  &-title {
+      font-weight: 800;
+  }
+
+  &-details {
+      font-size: 13px;
+      span {
+          font-weight: 600;
+      }
+  }
+
+  p {
+      margin: 0;
+  }
+}
+
+

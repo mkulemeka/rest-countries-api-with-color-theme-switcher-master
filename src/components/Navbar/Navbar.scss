@@ -1,0 +1,12 @@
+.app__nav {
+    background-color: var(--elements-color);
+    color: var(--text-color);
+    .logo {
+        font-weight: 800;
+        font-size: var(--detailpage-font);
+    }
+
+    .theme-switcher {
+        cursor: pointer;
+    }
+}
