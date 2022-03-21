@@ -3,7 +3,10 @@
         color: var(--text-color) !important;
         background-color: var(--elements-color) !important;
         outline: none;
-        border: 1px solid black;
+        padding-left: 2rem;
+        width: 100%;
+        border: 1px transparent;
+        //box-shadow: 0px 0px 2px 4px var(--elements-color);
         &:focus {
             outline: none !important;
         }
@@ -15,5 +18,11 @@
         outline: none;
         cursor: pointer;
         appearance: auto;
+    }
+
+    .filter-container {
+        @media screen and (max-width: 600px) {
+            justify-content: flex-start !important;
+        }
     }
 }

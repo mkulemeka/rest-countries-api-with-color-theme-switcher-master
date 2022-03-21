@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Container from "react-bootstrap/Container";
 import { Navbar, Card, Filter } from "./components";
 import { motion } from "framer-motion";
@@ -69,7 +70,7 @@ const App = () => {
               Loading...
             </h3>
           ) : (
-            <motion.div layout className="row justify-content-between gap-2">
+            <motion.div className="row justify-content-between gap-2">
               {filteredCountries.map((country, index) => {
                 const { name, flag, population, region, capital } = country;
                 return (

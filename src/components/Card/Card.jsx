@@ -4,7 +4,7 @@ import "./Card.scss";
 
 const Card = ({ name, flag, population, region, capital }) => {
   return (
-    <motion.div layout className='app-card col-3 col-sm-8'>
+    <motion.div whileInView={{y:[-20, 0], opacity:[0,1]}} transition={{duration: .75}} className='app-card col-3 col-sm-8'>
       <div className="app__card">
         <div className="app__card-img">
           <img src={flag} alt={name} />

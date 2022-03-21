@@ -10,14 +10,14 @@ const Filter = ({ handleFilter, handleSearch, searchInput }) => {
           <div className="col-sm-4">
             <input
               type="text"
-              placeholder="Search"
-              className="form-control"
+              placeholder="Search for a country..."
+              className="form-control-lg"
               id="search"
               value={searchInput}
               onChange={(e) => handleSearch(e.target.value)}
             />
           </div>
-          <div className='col-sm-2'>
+          <div className='filter-container col-sm-2 d-flex justify-content-end'>
             <select
               className="app__filter-dropdown form-control"
               onChange={handleFilter}
