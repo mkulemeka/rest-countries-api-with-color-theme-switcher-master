@@ -1,28 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
 :root {
-    --bg-color: hsl(0, 0%, 98%);
-    --text-color: hsl(200, 15%, 8%);
-    --elements-color: hsl(0, 0%, 100%);
-    --input-color: hsl(0, 0%, 52%);
+  --bg-color: hsl(0, 0%, 98%);
+  --text-color: hsl(200, 15%, 8%);
+  --elements-color: hsl(0, 0%, 100%);
+  --input-color: hsl(0, 0%, 52%);
 
-    --homepage-font: 14px;
-    --detailpage-font: 16px;
+  --homepage-font: 14px;
+  --detailpage-font: 16px;
 
-    --font-family: 'Nunito Sans', sans-serif;
+  --font-family: "Nunito Sans", sans-serif;
 }
 
 .dark-mode {
-    --bg-color: hsl(207, 26%, 17%);
-    --text-color: hsl(0, 0%, 100%);
-    --elements-color: hsl(209, 23%, 22%);
+  --bg-color: hsl(207, 26%, 17%);
+  --text-color: hsl(0, 0%, 100%);
+  --elements-color: hsl(209, 23%, 22%);
 }
 
 body {
-    font-family: var(--font-family);
-    font-size: var(--homepage-font);
+  font-family: var(--font-family);
+  font-size: var(--homepage-font);
+}
+
+a {
+  text-decoration: none !important;
 }
 
 .app {
-    min-height: 100vh;
-    background-color: var(--bg-color);
+  min-height: 100vh;
+  background-color: var(--bg-color);
 }
+
+.text-color {
+    color: var(--text-color)
+}
+
+

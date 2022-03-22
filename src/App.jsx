@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import Container from "react-bootstrap/Container";
-import { Navbar, Card, Filter } from "./components";
-import { motion } from "framer-motion";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
+import { Navbar, Countries, Country } from "./components";
+
 import "./App.scss";
 
 const App = () => {
@@ -32,7 +32,6 @@ const App = () => {
           .toLowerCase()
           .includes(searchValue.toLowerCase())
       );
-      console.log(filteredSearch);
       setFilteredCountries(filteredSearch);
     } else {
       setFilteredCountries(countries);
@@ -54,40 +53,25 @@ const App = () => {
 
   return (
     <div className={`app ${darkMode ? "dark-mode" : ""}`}>
-      <Navbar setDarkMode={setDarkMode} darkMode={darkMode} />
-      <Filter
-        search={searchInput}
-        handleFilter={handleFilter}
-        handleSearch={handleSearch}
-      />
-      <Container className="card-container mt-5">
-        <div>
-          {isLoading ? (
-            <h3
-              className="text-center w-100"
-              style={{ color: "var(--text-color)" }}
-            >
-              Loading...
-            </h3>
-          ) : (
-            <motion.div className="row justify-content-between gap-2">
-              {filteredCountries.map((country, index) => {
-                const { name, flag, population, region, capital } = country;
-                return (
-                  <Card
-                    key={name + index}
-                    name={name}
-                    flag={flag}
-                    population={population}
-                    region={region}
-                    capital={capital}
-                  />
-                );
-              })}
-            </motion.div>
-          )}
-        </div>
-      </Container>
+      <Router>
+        <Navbar setDarkMode={setDarkMode} darkMode={darkMode} />
+        <Routes>
+          <Route
+            path="/"
+            exact
+            element={
+              <Countries
+                isLoading={isLoading}
+                filteredCountries={filteredCountries}
+                searchInput={searchInput}
+                handleFilter={handleFilter}
+                handleSearch={handleSearch}
+              />
+            }
+          />
+          <Route path="/:name" element={<Country />} />
+        </Routes>
+      </Router>
     </div>
   );
 };

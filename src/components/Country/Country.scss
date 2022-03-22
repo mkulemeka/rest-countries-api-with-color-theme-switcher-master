@@ -1,0 +1,26 @@
+.app__country {
+  color: var(--text-color);
+
+  section {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-img {
+    width: 40%;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-details {
+    width: 50%;
+
+    .details {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
