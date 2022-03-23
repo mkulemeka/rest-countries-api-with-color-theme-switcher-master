@@ -1,26 +1,75 @@
 .app__country {
   color: var(--text-color);
+  button {
+    font-size: var(--homepage-font);
+    background-color: var(--element-color);
+    width: 8rem;
+    height: 2.3rem;
+    border-radius: 5px;
+    outline: none;
+    border: transparent;
+    box-shadow: 0 0 3px 0.5px var(--input-color);
 
+    a {
+      color: var(--text-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 600;
+    }
+  }
   section {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 600px) {
+      justify-content: center;
+    }
+  }
+
+  .country-name {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
   }
 
   &-img {
-    width: 40%;
+    width: 50%;
 
     img {
       width: 100%;
+      height: 100%;
       object-fit: cover;
+    }
+
+    @media screen and (max-width: 600px) {
+      width: 90%;
     }
   }
 
   &-details {
-    width: 50%;
+    width: 40%;
 
     .details {
       display: flex;
       justify-content: space-between;
+    }
+
+    .text-headings {
+      font-weight: 600;
+    }
+
+    @media screen and (max-width: 600px) {
+      width: 90%;
+
+      .details {
+        flex-direction: column;
+
+        div {
+          margin-bottom: 1.5rem;
+        }
+      }
     }
   }
 }

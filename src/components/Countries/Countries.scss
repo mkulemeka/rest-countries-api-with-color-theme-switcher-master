@@ -1,0 +1,12 @@
+.app__display {
+  // display: grid;
+  // grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 770px) {
+    flex-direction: column;
+  }
+}

@@ -2,6 +2,7 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import { motion } from "framer-motion";
 import { Card, Filter } from "../../components";
+import './Countries.scss'
 
 const Countries = ({
   isLoading,
@@ -27,7 +28,7 @@ const Countries = ({
               Loading...
             </h3>
           ) : (
-            <motion.div className="row justify-content-between gap-2">
+            <motion.div className="app__display ">
               {filteredCountries.map(
                 ({ name, flag, population, region, capital }, index) => {
                   return (

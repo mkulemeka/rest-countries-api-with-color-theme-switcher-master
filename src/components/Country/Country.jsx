@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import Container from "react-bootstrap/Container";
+import { BsArrowLeft} from 'react-icons/bs'
 import "./Country.scss";
 
 const Country = () => {
@@ -28,9 +29,11 @@ const Country = () => {
         </h3>
       ) : (
         <Container className="app__country">
-          <Link to="/" className="btn btn-light dark:btn-dark my-5">
-            &larr; Back
-          </Link>
+          <button className="button my-5">
+            <Link to="/" >
+              <BsArrowLeft className="mx-2" /> Back
+            </Link>
+          </button>
           {country.map(
             (
               {
@@ -44,45 +47,48 @@ const Country = () => {
                 topLevelDomain,
                 currencies,
                 languages,
+                borders,
               },
               index
             ) => (
-              <section key={name + index}>
+              <section key={name + index} >
                 <div className="app__country-img">
                   <img src={flag} alt={name} />
                 </div>
-                <div className="app__country-details py-5">
-                  <h3>{name}</h3>
-                  <div className="details">
+                <div className="app__country-details py-5 d-flex justify-content-center flex-column">
+                  <h3 className="country-name">{name}</h3>
+                  <div className="details flex-wrap">
                     <div>
                       <p>
-                        <span>Native Name: </span>
+                        <span className="text-headings">Native Name: </span>
                         {nativeName}
                       </p>
                       <p>
-                        <span>Population: </span>
+                        <span className="text-headings">Population: </span>
                         {population}
                       </p>
                       <p>
-                        <span>Region: </span>
+                        <span className="text-headings">Region: </span>
                         {region}
                       </p>
                       <p>
-                        <span>Sub Region: </span>
+                        <span className="text-headings">Sub Region: </span>
                         {subregion}
                       </p>
                       <p>
-                        <span>Capital: </span>
+                        <span className="text-headings">Capital: </span>
                         {capital}
                       </p>
                     </div>
                     <div>
                       <p>
-                        <span>Top Level Domain: </span>
+                        <span className="text-headings">
+                          Top Level Domain:{" "}
+                        </span>
                         {topLevelDomain}
                       </p>
                       <p>
-                        <span>Currencies: </span>
+                        <span className="text-headings">Currencies: </span>
                         {currencies.map(({ name }) => (
                           <span key={name}>{name}</span>
                         ))}
