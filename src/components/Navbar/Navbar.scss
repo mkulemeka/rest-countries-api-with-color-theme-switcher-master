@@ -1,12 +1,16 @@
 .app__nav {
-    background-color: var(--elements-color);
-    color: var(--text-color);
-    .logo {
-        font-weight: 800;
-        font-size: 1.8rem;
-    }
+  background-color: var(--elements-color);
+  color: var(--text-color);
+  .logo {
+    font-weight: 800;
+    font-size: 1.8rem;
 
-    .theme-switcher {
-        cursor: pointer;
+    @media screen and (max-width: 500px) {
+      font-size: 1.2rem;
     }
+  }
+
+  .theme-switcher {
+    cursor: pointer;
+  }
 }
