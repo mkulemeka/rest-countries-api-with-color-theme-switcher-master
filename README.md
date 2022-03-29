@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Frontend Mentor Solution](https://www.frontendmentor.io/solutions/responsive-design-react-saas-bootstrap-framer-motion-and-api-SyryQ--m5)
 - Live Site URL: [Countries API](https://mk-countries.netlify.app)
 
 ## My process
@@ -53,7 +53,7 @@ Users should be able to:
 ## Author
 
 - Website - [Mtendere Kulemeka](https://www.devmk.netlify.app)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/mkulemeka)
 - Twitter - [@yourusername](https://www.twitter.com/kahle01)
 
 
