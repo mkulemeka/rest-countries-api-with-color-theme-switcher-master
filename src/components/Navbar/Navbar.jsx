@@ -1,6 +1,6 @@
 import React from "react";
 import { Nav, Container } from "react-bootstrap";
-import { BsMoon, BsMoonFill } from "react-icons/bs";
+import { BsSun, BsMoonFill } from "react-icons/bs";
 import "../Navbar/Navbar.scss";
 
 const Navbar = ({ setDarkMode, darkMode }) => {
@@ -20,9 +20,9 @@ const Navbar = ({ setDarkMode, darkMode }) => {
           {darkMode ? (
             <BsMoonFill className="mx-2 h-100" />
           ) : (
-            <BsMoon className="mx-2 h-100" />
+            <BsSun className="mx-2 h-100" />
           )}
-          <span>Dark Mode</span>
+          <span>{darkMode ? "Dark" : "Light"} Mode</span>
         </div>
       </Container>
     </Nav>

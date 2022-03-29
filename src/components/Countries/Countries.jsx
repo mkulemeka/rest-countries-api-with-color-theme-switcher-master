@@ -2,7 +2,7 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import { motion } from "framer-motion";
 import { Card, Filter } from "../../components";
-import './Countries.scss'
+import "./Countries.scss";
 
 const Countries = ({
   isLoading,
@@ -28,7 +28,12 @@ const Countries = ({
               Loading...
             </h3>
           ) : (
-            <motion.div className="app__display ">
+            <motion.div
+              className="app__display"
+              initial={{ y: -20 }}
+              animate={{ y: 0 }}
+              transition={{staggerChildren: 3}}
+            >
               {filteredCountries.map(
                 ({ name, flag, population, region, capital }, index) => {
                   return (

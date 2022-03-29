@@ -6,12 +6,12 @@ import "./Card.scss";
 const Card = ({ name, flag, population, region, capital }) => {
   return (
     <motion.div
-      whileInView={{ y: [-20, 0], opacity: [0, 1] }}
-      transition={{ duration: 0.75 }}
       className="app-card col-3 col-sm-8"
+      whileInView={{ opacity: [0, 1] }}
+      transition={{ duration: 0.75 }}
     >
       <Link to={`/${name}`}>
-      <div className="app__card">
+        <div className="app__card">
           <div className="app__card-img">
             <img src={flag} alt={name} />
           </div>

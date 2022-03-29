@@ -20,6 +20,10 @@
         appearance: auto;
         border: transparent !important;
         box-shadow: 0 0 4px 0.5px var(--input-color);
+
+        @media screen and (max-width: 600px) {
+            margin-top: 2rem;
+        }
     }
 
     .filter-container {
